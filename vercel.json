@@ -5,7 +5,10 @@
       "schedule": "15 20 * * *"
     }
   ],
-  "rewrites": [
-    {"source": "/", "destination": "https://minimal-repro-vercel-cron.vercel.app/"}
+  "routes": [
+    {
+      "src": "/api/revalidateMainDomain",
+      "dest": "https://minimal-repro-vercel-cron.vercel.app/api/revalidate"
+    }
   ]
 }
